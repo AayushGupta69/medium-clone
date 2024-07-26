@@ -1,10 +1,11 @@
+import { SignupInput } from "@aayushgupta69/medium-common";
 import axios from "axios";
 import { ChangeEvent, useState } from "react";
 import { Link, useNavigate } from "react-router-dom"
 
 export const Auth = ({ type }: { type: "signup" | "signin" }) => {
   const navigate = useNavigate();
-  const [postInputs, setPostInputs] = useState({
+  const [postInputs, setPostInputs] = useState<SignupInput>({
     name: '',
     username: '',
     password: '',
