@@ -1,5 +1,5 @@
 {
-  "name": "common",
+  "name": "@aayushgupta69/medium-common",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,6 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "AayushGupta69",
+  "license": "ISC",
+  "dependencies": {
+    "zod": "^3.23.8"
+  }
 }
