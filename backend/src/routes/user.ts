@@ -11,8 +11,8 @@ export const userRouter = new Hono<{
 	}
 }>();
 
-// POST /api/v1/user/signup
-userRouter.get('/signup', async (c) => {
+// Post /api/v1/user/signup - Create a new user
+userRouter.post('/signup', async (c) => {
 	const prisma = new PrismaClient({
 		datasourceUrl: c.env.DATABASE_URL,
 	}).$extends(withAccelerate());
@@ -44,6 +44,7 @@ userRouter.get('/signup', async (c) => {
   }
 });
 
+// Post /api/v1/user/signin - Sign in a user
 userRouter.post('/signin', async (c) => {
   const prisma = new PrismaClient({
 		datasourceUrl: c.env.DATABASE_URL,
