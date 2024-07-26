@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import { sign } from "hono/jwt";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client/edge";
 import { withAccelerate } from "@prisma/extension-accelerate";
 import { signInInput, signUpInput } from "@aayushgupta69/medium-common";
 
@@ -10,6 +10,7 @@ export const userRouter = new Hono<{
 		JWT_SECRET: string;
 	}
 }>();
+
 
 // Post /api/v1/user/signup - Create a new user
 userRouter.post('/signup', async (c) => {
@@ -43,6 +44,7 @@ userRouter.post('/signup', async (c) => {
     return c.json({ message: "An unexpected error occured during signup. Please try again later!" }, 500);
   }
 });
+
 
 // Post /api/v1/user/signin - Sign in a user
 userRouter.post('/signin', async (c) => {
