@@ -1,6 +1,28 @@
 # Medium Clone
+This is a clone of a popular blogging platform Medium. It is built using modern web technologies and follows a fullstack architechture.
 
-# Screenshots
+## Table of Contents
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Screenshots](#screenshots)
+
+## Features
+- User authentication and authorization with JSON Web Tokens (JWT).
+- Responsive and modern UI design.
+- Serverless backend with efficient API handling.
+- Data validation and type inference.
+- Connection pooling for optimized database interactions.
+
+## Tech Stack
+- **Frontend:** React.js, Typescript
+- **Backend:** Cloudflare Workers, Hono Framework
+- **Validation:** Zod
+- **Database:** PostgreSQL, PrismaORM with Prisma Accelerate
+- **Authentication:** JSON Web Tokens (JWT)
+- **Deployment:** Vercel (frontend), Cloudflare Workers (backend)
+- **Common npm Package:** Shared types between frontend and backend published as an npm package
+
+## Screenshots
 
 - **Signup Page**
   
